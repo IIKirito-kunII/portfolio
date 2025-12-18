@@ -29,7 +29,7 @@ const SkillsCube = () => {
   }, []);
 
   return (
-    <div className="w-full h-full perspective cursor-pointer" onClick={rotate}>
+    <div className="w-full h-full" onClick={rotate}>
       <div
         className="skill-cube"
         style={{ transform: `rotateY(-${rotation}deg)` }}
@@ -37,13 +37,13 @@ const SkillsCube = () => {
         {SKILL_FACES.map((s, i) => (
           <div
             key={i}
-            className={`skill-face face-${i}`}
+            className={`skill-face face-${i} sm:p-8 pl-4 p-2`}
             style={{ borderLeft: `4px solid ${s.color}` }}
           >
-            <h3 className="text-sm font-semibold" style={{ color: s.color }}>
+            <h3 className="text-[4vw] font-semibold" style={{ color: s.color }}>
               {s.title}
             </h3>
-            <ul className="text-sm mt-2 text-gray-200 space-y-1">
+            <ul className="text-[3.5vw] text-gray-200">
               {s.items.map((item) => (
                 <li key={item}>• {item}</li>
               ))}

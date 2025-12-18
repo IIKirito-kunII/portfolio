@@ -65,15 +65,15 @@ const Dashboard = ({
   return (
     <div className="w-screen h-max bg-black p-4 pt-12 pb-12 overflow-y-auto scrollbar-hide">
       <div
-        className={`rowsheight grid grid-cols-4 gap-4 auto-rows-[86.25px] sm:grid-cols-6 grid-flow-dense 
+        className={` grid grid-cols-4 gap-4 grid-flow-dense 
           ${transitioning ? "tiles-exit" : "tiles-enter"}`}
       >
         {/* medium tile */}
-        <div className="col-span-2 row-span-2 bg-[url('/images/sdp.jpeg')] bg-center bg-cover bg-no-repeat active:scale-95 transition" />
+        <div className="col-span-2 row-span-2 bg-[url('/images/sdp.jpeg')] aspect-square bg-center bg-cover bg-no-repeat active:scale-95 transition" />
 
         {/* small tiles */}
         <div
-          className="bg-[#0078D7] flex items-center justify-center active:scale-95 transition"
+          className="bg-[#0078D7] aspect-square flex items-center justify-center active:scale-95 transition"
           onClick={() =>
             window.open(
               "https://www.linkedin.com/in/lavish-kumar-varshney-32b141222/",
@@ -82,10 +82,10 @@ const Dashboard = ({
             )
           }
         >
-          <FaLinkedin size={48} color="white" />
+          <FaLinkedin className="w-[16vw] h-[16vw]  text-white" />
         </div>
         <div
-          className="bg-[#1F1F1F] flex items-center justify-center "
+          className="bg-[#1F1F1F] aspect-square flex items-center justify-center "
           onClick={() =>
             window.open(
               "https://github.com/IIKirito-kunII",
@@ -94,11 +94,11 @@ const Dashboard = ({
             )
           }
         >
-          <FaGithub size={48} color="white" />
+          <FaGithub className="w-[14vw] h-[14vw]  text-white" />
         </div>
         <div
           ref={mailRef}
-          className="bg-[#10893E] flex items-center justify-center active:scale-95 transition"
+          className="bg-[#10893E] aspect-square flex items-center justify-center active:scale-95 transition"
           onClick={() => (
             (window.location.href =
               "mailto:lavishkumarvarshney@gmail.com?subject=Portfolio%20Inquiry"),
@@ -106,10 +106,10 @@ const Dashboard = ({
             "noopener,noreferrer"
           )}
         >
-          <FaRegEnvelope size={48} color="white" />
+          <FaRegEnvelope className="w-[14vw] h-[14vw]  text-white" />
         </div>
         <div
-          className="bg-[#2D2D2D] flex items-center justify-center active:scale-95 transition"
+          className="bg-[#2D2D2D] aspect-square flex items-center justify-center active:scale-95 transition"
           onClick={() =>
             window.open(
               "files/Lavish_Kumar_Varshney_Software_Developer_Resume.pdf",
@@ -118,11 +118,11 @@ const Dashboard = ({
             )
           }
         >
-          <FaFileAlt size={48} color="white" />
+          <FaFileAlt className="w-[14vw] h-[14vw]  text-white" />
         </div>
 
         {/* wide tile */}
-        <div className="col-span-4 row-span-1 text-2xl font-semibold active:scale-95 transition">
+        <div className="col-span-4 aspect-4/1 row-span-1 text-[6vw] whitespace-nowrap font-semibold active:scale-95 transition">
           <FlipTile
             front={
               <div className="bg-[#0078D7] flex w-full h-full items-center justify-center px-4">
@@ -139,13 +139,13 @@ const Dashboard = ({
 
         {/* medium tile */}
         <div
-          className="col-span-2 row-span-2"
+          className="col-span-2 row-span-2 aspect-square"
           onClick={() => openProject("smrs")}
         >
           <FlipTile
             front={
-              <div className="bg-[#00B7C3] w-full h-full p-4 text-sm flex text-center flex-col justify-center gap-2">
-                <h2 className="font-semibold text-lg">
+              <div className="bg-[#00B7C3] w-full h-full p-2 text-[3vw] flex text-center flex-col justify-center gap-2">
+                <h2 className="font-semibold text-[4vw]">
                   Smart Medical Record System
                 </h2>
                 <p>Upload, view & manage medical PDFs.</p>
@@ -158,13 +158,13 @@ const Dashboard = ({
           />
         </div>
         <div
-          className="col-span-2 row-span-2"
+          className="col-span-2 row-span-2 aspect-square"
           onClick={() => openProject("leads")}
         >
           <FlipTile
             front={
-              <div className="bg-[#744DA9] w-full h-full p-4 text-sm flex text-center flex-col justify-center gap-2">
-                <h2 className="font-semibold text-lg">
+              <div className="bg-[#744DA9] w-full h-full p-2 text-[3vw] flex text-center flex-col justify-center gap-2">
+                <h2 className="font-semibold text-[4vw]">
                   Leads Tracker – Chrome Extension
                 </h2>
                 <p>Save tabs, text snippets & code instantly.</p>
@@ -177,13 +177,13 @@ const Dashboard = ({
           />
         </div>
         <div
-          className="col-span-2 row-span-2"
+          className="col-span-2 row-span-2 aspect-square"
           onClick={() => openProject("luminous")}
         >
           <FlipTile
             front={
-              <div className="bg-[#FFB900] w-full h-full p-4 text-sm flex text-center flex-col justify-center gap-2">
-                <h2 className="font-semibold text-lg">Luminous Quotes</h2>
+              <div className="bg-[#FFB900] w-full h-full p-2 text-[3vw] flex text-center flex-col justify-center gap-2">
+                <h2 className="font-semibold text-[4vw]">Luminous Quotes</h2>
                 <p>Interactive lamp & inspirational quote generator.</p>
                 <p>React · GSAP · CSS Variables · API</p>
               </div>
@@ -195,24 +195,24 @@ const Dashboard = ({
         </div>
 
         {/* ================= INTERNSHIPS ================= */}
-        <div className="col-span-4 row-span-2 border-l-4 border-blue-500/40 bg-[#2D2D2D] flex flex-col justify-between p-2 pl-4 active:scale-95 transition">
+        <div className="col-span-4 row-span-2 aspect-2/1 border-l-4 border-blue-500/40 bg-[#2D2D2D] flex flex-col justify-between p-2 pl-4 sm:p-8 active:scale-95 transition">
           <div>
-            <p className="text-xs text-gray-300">Jun – Aug 2024</p>
-            <h2 className="text-lg font-semibold mt-1">
+            <p className="text-[3vw] text-gray-300">Jun – Aug 2024</p>
+            <h2 className="text-[5vw] font-semibold mt-1">
               IBM SkillsBuild (CSRBOX)
             </h2>
-            <p className="text-sm text-gray-200">
+            <p className="text-[3.5vw] text-gray-200">
               Front-End Web Developer Intern
             </p>
           </div>
 
-          <ul className="text-sm text-gray-200 list-disc list-inside mt-2 space-y-1">
+          <ul className="text-[3.3vw] text-gray-200 list-disc list-inside mt-2">
             <li>Built responsive UI components using React</li>
             <li>Completed full-stack engineering modules</li>
             <li>Worked on real-world project workflows</li>
           </ul>
 
-          <div className="flex gap-3 text-xs m-3 text-blue-400">
+          <div className="flex gap-3 text-[3vw] mt-2 text-blue-400">
             <span
               onClick={() =>
                 window.open(
@@ -251,21 +251,23 @@ const Dashboard = ({
           </div>
         </div>
 
-        <div className="col-span-4 row-span-2 border-l-4 border-blue-500/40 bg-[#2D2D2D] p-2 pl-4 flex flex-col justify-between active:scale-95 transition">
+        <div className="col-span-4 row-span-2 aspect-2/1 border-l-4 border-blue-500/40 bg-[#2D2D2D] p-2 pl-4 sm:p-8 flex flex-col justify-between active:scale-95 transition">
           <div>
-            <p className="text-xs text-gray-300">Aug – Sept 2023</p>
-            <h2 className="text-lg font-semibold mt-1">
+            <p className="text-[3vw] text-gray-300">Aug – Sept 2023</p>
+            <h2 className="text-[5vw] font-semibold mt-1">
               Bharat Intern (now Orbitor)
             </h2>
-            <p className="text-sm text-gray-200">Full-Stack Developer Intern</p>
+            <p className="text-[3.5vw] text-gray-200">
+              Full-Stack Developer Intern
+            </p>
           </div>
 
-          <ul className="text-sm text-gray-200 list-disc list-inside mt-2 space-y-1">
+          <ul className="text-[3.3vw] text-gray-200 list-disc list-inside mt-2">
             <li> Built a Content Management and Project Management Tool.</li>
             <li> Designed responsive UI & optimized React flow.</li>
           </ul>
 
-          <div className="flex gap-3 text-xs m-3 text-blue-400">
+          <div className="flex gap-3 text-[3vw] mt-2 text-blue-400">
             <span
               onClick={() =>
                 window.open(
@@ -303,73 +305,89 @@ const Dashboard = ({
             </span>
           </div>
         </div>
-        <div className="col-span-2 bg-[#1F1F1F] m-2 row-span-2">
+        <div className="col-span-2 bg-[#1F1F1F] aspect-square row-span-2">
           <SkillsCube />
         </div>
         <CertificateCarouselTile />
 
         {/* ================= EDUCATION ================= */}
+        <div className="col-span-4 row-span-2 aspect-2/1 grid grid-cols-2 gap-4">
+          <div className="bg-[#1F1F1F] p-2 sm:p-8 flex flex-col justify-between">
+            {/* Top */}
+            <div>
+              <p className="text-[3vw] text-gray-400 tracking-wide">
+                EDUCATION
+              </p>
+              <h3 className="text-[4.7vw] font-semibold m-1">B.Tech — CSE</h3>
+              <p className="text-[3.5vw] text-gray-300">
+                Gurukula Kangri Vishwavidyalaya (FET), Haridwar, Uttarakhand
+              </p>
+            </div>
 
-        <div className="col-span-2 row-span-2 bg-[#1F1F1F] p-2 flex flex-col justify-between">
-          {/* Top */}
-          <div>
-            <p className="text-xs text-gray-400 tracking-wide">EDUCATION</p>
-            <h3 className="text-lg font-semibold m-1">B.Tech — CSE</h3>
-            <p className="text-sm text-gray-300">
-              Gurukula Kangri Vishwavidyalaya (FET), Haridwar, Uttarakhand
+            {/* Bottom */}
+            <div>
+              <p className="text-[3vw] text-gray-400">Nov 2022 – Present</p>
+              <p className="text-[3.5vw] text-gray-400 mt-1">
+                VI SGPA: <span className="font-semibold text-white">8.32</span>
+              </p>
+            </div>
+            <h3 className="text-[4.7vw] font-semibold m-1 whitespace-nowrap">
+              GATE CSE 2025
+            </h3>
+            <p className="text-[3.5vw] text-gray-300">
+              AIR <span className="font-semibold">20150</span> • Score 360
+            </p>
+            <p className="text-[3vw] text-gray-400">
+              Qualified in 3rd year of B.Tech
             </p>
           </div>
 
-          {/* Bottom */}
-          <div>
-            <p className="text-xs text-gray-400">Nov 2022 – Present</p>
-            <p className="text-sm text-gray-400 mt-2">
-              SGPA:{" "}
-              <span className="font-semibold text-white text-base">8.32</span>
-            </p>
+          <div className="grid grid-rows-2 gap-4">
+            <div className="bg-[#1F1F1F] p-2 sm:p-8">
+              <h3 className="text-[4.7vw] font-semibold m-1 whitespace-nowrap">
+                Intermediate XII
+              </h3>
+              <p className="text-[3vw] text-gray-300">
+                Gayatri Public School, Agra, Uttar Pradesh — CBSE
+              </p>
+              <p className="text-[3vw] text-gray-400">Science Stream</p>
+              <p className="text-[3vw] text-gray-400 mt-1">
+                Completed: March 2021
+              </p>
+            </div>
+            <div className="bg-[#1F1F1F] p-2 sm:p-8">
+              <h3 className="text-[4.7vw] font-semibold m-1">High School X</h3>
+              <p className="text-[3vw] text-gray-300">
+                Gayatri Public School, Agra, Uttar Pradesh — CBSE
+              </p>
+              <p className="text-[3vw] text-gray-400 mt-1">
+                Completed: March 2019
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="col-span-2 row-span-1 bg-[#1F1F1F] p-2">
-          <h3 className="text-sm font-semibold">GATE 2025 — CSE</h3>
-          <p className="text-xs text-gray-300 mt-1">
-            AIR <span className="font-semibold">20150</span> • Score 360
-          </p>
-          <p className="text-xs text-gray-400">
-            Qualified in 3rd year of B.Tech
-          </p>
-        </div>
-
-        <div className="col-span-2 row-span-1 bg-[#1F1F1F] p-2">
-          <h3 className="text-sm font-semibold">Senior Secondary (XII)</h3>
-          <p className="text-xs text-gray-300 mt-1">
-            Gayatri Public School — CBSE
-          </p>
-          <p className="text-xs text-gray-400">Science Stream</p>
-          <p className="text-xs text-gray-400">Completed: March 2021</p>
-        </div>
-
-        <div className="col-span-4 row-span-2 active:scale-95 transition">
+        <div className="col-span-4 row-span-2 aspect-2/1 active:scale-95 transition">
           <FlipTile
             front={
-              <div className="w-full h-full bg-[#1F1F1F] p-2 flex flex-col justify-between">
+              <div className="w-full h-full bg-[#1F1F1F] p-2 sm:p-8 flex flex-col justify-between">
                 {/* Top */}
                 <div>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-[3vw] text-gray-400">
                     VOLUNTEERING · Nov 2025
                   </p>
 
-                  <h2 className="text-lg font-semibold">
+                  <h2 className="text-[4.6vw] font-semibold">
                     Co-Facilitator & Technical Coordinator
                   </h2>
 
-                  <p className="text-sm text-gray-300">
+                  <p className="text-[3.2vw] text-gray-300">
                     Gurukula Kangri Vishwavidyalaya
                   </p>
                 </div>
 
                 {/* Middle */}
-                <ul className="text-sm text-gray-200 list-disc list-inside space-y-1">
+                <ul className="text-[3.1vw] text-gray-200 list-disc list-inside">
                   <li>
                     Conducted technical awareness session for 1st-year B.Tech
                     students
@@ -379,7 +397,7 @@ const Dashboard = ({
                 </ul>
 
                 {/* Bottom */}
-                <p className="text-xs text-emerald-400 mt-2">
+                <p className="text-[3vw] text-emerald-400 mt-auto">
                   Science & Technology · Academic Outreach
                 </p>
               </div>

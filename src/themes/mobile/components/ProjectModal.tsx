@@ -8,7 +8,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
-      <div className="bg-zinc-900 max-w-lg w-full rounded-xl p-4 relative">
+      <div className="bg-zinc-900 max-w-lg max-h-screen w-full rounded-xl p-4 sm:pl-8  relative">
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-white text-xl"
@@ -16,13 +16,13 @@ const ProjectModal = ({ project, onClose }: Props) => {
           ✕
         </button>
 
-        <h2 className="text-2xl font-semibold text-white mb-2">
+        <h2 className="text-[5vw] font-semibold text-white mb-2">
           {project.title}
         </h2>
 
-        <p className="text-gray-300 text-sm mb-3">{project.problem}</p>
+        <p className="text-gray-300 text-[3.2vw] mb-3">{project.problem}</p>
 
-        <p className="text-gray-200 text-sm mb-4">
+        <p className="text-gray-200 text-[3.2vw] mb-4">
           <span className="text-white font-medium">What I built:</span>{" "}
           {project.contribution}
         </p>
@@ -31,7 +31,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
           {project.tech.map((t: string) => (
             <span
               key={t}
-              className="bg-zinc-800 text-gray-200 text-xs px-2 py-1"
+              className="bg-zinc-800 text-gray-200 text-[3vw] px-2 py-1"
             >
               {t}
             </span>
@@ -49,7 +49,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
           ))}
         </div>
 
-        <div className="flex gap-4 text-sm">
+        <div className="flex gap-4 text-[3.5vw]">
           <a href={project.github} target="_blank" className="text-blue-400">
             Source Code
           </a>

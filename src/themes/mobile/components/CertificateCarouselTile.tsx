@@ -34,7 +34,7 @@ export default function CertificateCarouselTile() {
     setIndex((i) => (i - 1 + certificates.length) % certificates.length);
 
   return (
-    <div className="col-span-4 row-span-2 grid grid-cols-[0.5fr_3fr_0.5fr] gap-2">
+    <div className="col-span-4 row-span-2 aspect-2/1 grid grid-cols-[0.5fr_3fr_0.5fr] gap-2">
       {/* LEFT ARROW */}
       <Arrow direction="left" onClick={prev} />
 
@@ -46,11 +46,11 @@ export default function CertificateCarouselTile() {
         <div className={`certificate-tile ${flipped ? "flipped" : ""}`}>
           {/* FRONT */}
           <div className="cert-face front">
-            <p className="text-xs text-gray-300">{cert.date}</p>
-            <h3 className="text-lg font-semibold mt-2 leading-snug">
+            <p className="text-[3vw] text-gray-300">{cert.date}</p>
+            <h3 className="text-[4.9vw] font-semibold mt-2 leading-snug">
               {cert.title}
             </h3>
-            <span className="mt-auto text-sm text-crimson">
+            <span className="mt-auto text-[3.5vw] text-crimson">
               FreeCodeCamp Certificate
             </span>
           </div>
@@ -81,7 +81,7 @@ function Arrow({
   return (
     <div
       onClick={onClick}
-      className="bg-[#1F1F1F] flex items-center justify-center text-2xl text-crimson active:scale-95 transition select-none"
+      className="bg-[#1F1F1F] flex items-center justify-center text-[6vw] text-crimson active:scale-95 transition select-none"
     >
       {direction === "left" ? "‹" : "›"}
     </div>
