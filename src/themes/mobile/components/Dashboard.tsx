@@ -69,7 +69,7 @@ const Dashboard = ({
           ${transitioning ? "tiles-exit" : "tiles-enter"}`}
       >
         {/* medium tile */}
-        <div className="col-span-2 row-span-2 bg-[url('images/sdp.jpeg')] bg-center bg-cover bg-no-repeat active:scale-95 transition" />
+        <div className="col-span-2 row-span-2 bg-[url('/images/sdp.jpeg')] bg-center bg-cover bg-no-repeat active:scale-95 transition" />
 
         {/* small tiles */}
         <div
@@ -153,7 +153,7 @@ const Dashboard = ({
               </div>
             }
             back={
-              <div className="w-full h-full bg-center bg-contain bg-no-repeat bg-[url('finder/smrs-front.png')] ring-2 ring-white/90 ring-inset" />
+              <div className="w-full h-full bg-center bg-contain bg-no-repeat bg-[url('/finder/smrs-front.png')] ring-2 ring-white/90 ring-inset" />
             }
           />
         </div>
@@ -172,7 +172,7 @@ const Dashboard = ({
               </div>
             }
             back={
-              <div className="w-full h-full bg-center bg-contain bg-no-repeat bg-[url('finder/UI.png')] ring-2 ring-white/90 ring-inset" />
+              <div className="w-full h-full bg-center bg-contain bg-no-repeat bg-[url('/finder/UI.png')] ring-2 ring-white/90 ring-inset" />
             }
           />
         </div>
@@ -189,7 +189,7 @@ const Dashboard = ({
               </div>
             }
             back={
-              <div className="w-full h-full bg-center bg-contain bg-no-repeat bg-[url('finder/lamp-on.png')] ring-2 ring-white/90 ring-inset" />
+              <div className="w-full h-full bg-center bg-contain bg-no-repeat bg-[url('/finder/lamp-on.png')] ring-2 ring-white/90 ring-inset" />
             }
           />
         </div>

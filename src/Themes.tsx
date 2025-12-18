@@ -12,9 +12,7 @@ function Themes({ THEME }: { THEME: "classic" | "modern" }) {
     link.id = id;
     link.rel = "stylesheet";
     link.href =
-      THEME === "modern"
-        ? "/src/themes/modern/modern.css"
-        : "/src/themes/classic/AppClassic.css";
+      THEME === "modern" ? "/themes/AppModern.css" : "/themes/AppClassic.css";
 
     document.head.appendChild(link);
   }, [THEME]);
