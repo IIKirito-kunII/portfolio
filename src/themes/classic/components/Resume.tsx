@@ -146,13 +146,6 @@ function Resume() {
         TAB 4 — EXPERIENCE
       ---------------------------------------- */}
       <Tab title="Experience">
-        <Fieldset legend="GKV Tech Awareness — Volunteer (Nov 2025)">
-          <Checkbox readOnly checked>
-            Co-facilitated a technical awareness session for 1st-year B.Tech
-            students on NIXI, IPv4/IPv6, DNS, DNSSEC, and India’s Internet
-            infrastructure.
-          </Checkbox>
-        </Fieldset>
         <Fieldset
           style={{ marginTop: 10 }}
           legend="IBM SkillsBuild (CSRBOX) — Front-End Web Developer Intern (Jun–Aug 2024)"
@@ -178,6 +171,36 @@ function Resume() {
           </Checkbox>
           <Checkbox readOnly checked>
             Designed responsive UI & optimized React flow.
+          </Checkbox>
+        </Fieldset>
+      </Tab>
+
+      {/* ----------------------------------------
+        TAB — VOLUNTEER EXPERIENCE
+      ---------------------------------------- */}
+      <Tab title="Volunteer Experience">
+        <Fieldset legend="Cyber Crime Awareness Session — Jawahar Navodaya Vidyalaya, Haridwar (21 Dec 2025)">
+          <Checkbox readOnly checked>
+            Co-facilitated a cyber crime awareness session for Class IX
+            students, contributing as a speaker and managing the digital
+            presentation setup.
+          </Checkbox>
+          <Checkbox readOnly checked>
+            Explained real-life cyber crime cases through interactive
+            discussions to improve digital safety awareness.
+          </Checkbox>
+        </Fieldset>
+        <Fieldset
+          legend="Technical Awareness Session - Gurukula Kangri Vishwavidyalaya, Haridwar (17 Nov 2025)"
+          style={{ marginTop: 10 }}
+        >
+          <Checkbox readOnly checked>
+            Co-facilitated a technical session covering NIXI, IPv4/IPv6, DNS,
+            DNSSEC, and India’s Internet infrastructure.
+          </Checkbox>
+          <Checkbox readOnly checked>
+            Engaged 1st-year B.Tech students through interactive Q&A on MERN
+            stack and full-stack development pathways.
           </Checkbox>
         </Fieldset>
       </Tab>

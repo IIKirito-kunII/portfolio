@@ -209,7 +209,15 @@ const PLACES_GALLERY = {
     },
     {
       id: 3,
-      img: "/gallery/volunteer.jpeg",
+      img: "/gallery/v.jpeg",
+    },
+    {
+      id: 4,
+      img: "/gallery/v1.jpeg",
+    },
+    {
+      id: 5,
+      img: "/gallery/v2.jpeg",
     },
   ],
 };
@@ -220,7 +228,7 @@ const PEOPLE_GALLERY = {
   children: [
     {
       id: 1,
-      img: "/gallery/git.jpeg",
+      img: "/gallery/p.jpeg",
     },
   ],
 };
